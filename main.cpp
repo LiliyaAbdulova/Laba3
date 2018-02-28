@@ -41,7 +41,22 @@ void Print()
 }
 void dobavlenie()
 {
-
+    Stek *t=new Stek;
+    strcpy(t->a.num,x.num);
+    t->next=*u;
+    *u=t;
+}
+bool Zabiraem(Stek**u, Car &x)
+{
+    if(*u==NULL)
+    {
+        return false;
+    }
+    Stek*t=*u;
+    strcpy(x.num, t->a.num);
+    *u=t->next;
+    delete t;
+    return true;
 }
 
 
