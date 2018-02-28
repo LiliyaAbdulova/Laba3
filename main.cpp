@@ -105,7 +105,40 @@ void Clear(Stek **u)
 
 int main()
 {
+    Stek *u=NULL;
+    int n;
+    Car x; //переменная x типа avto
+    do{
+        cout<<("Choose:")<<endl;
+        cout<<(" 1- New car arrived")<<endl;
+        cout<<(" 2- Print garage")<<endl;
+        cout<<(" 3- Car leave")<<endl;
+        cout<<(" 0- Exit")<<endl;
+        cout<<("Action: ")<<endl;
+        cin>>n;
 
+        switch (n)
+        {
+        case 1:
+            cout<<("Enter the number: ")<<endl;
+            vvod(x);
+            dobavlenie(&u, x); cout<<("Added!")<<endl; break;
+        case 2:
+            Print(u); break;
+        case 3:
+            Print(u);
+            vyezjaet_iz_garaja(&u);
+            break;
+        case 0:
+            Clear(&u);
+            break;
+        default:
+            cout<<("The car is not found")<<endl;
+
+        }
+        cout<<endl;
+    }while (n!=0);
+    return 0;
 }
 "# Laba3" 
 "# Laba3" 
